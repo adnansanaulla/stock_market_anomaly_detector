@@ -11,7 +11,7 @@ void write_clusters_to_csv(const string& filename, const vector<vector<double>>&
 }
 
 int main() {
-    string path = "data/processed/features.csv";
+    string path = "data/features.csv";
     vector<vector<double>> data = read_csv(path);
 
     vector<int> kmeans_labels = kmeans(data, 3, 100);

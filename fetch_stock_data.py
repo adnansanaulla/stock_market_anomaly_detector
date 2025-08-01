@@ -16,4 +16,4 @@ for ticker in tickers:
     dfs.append(df.reset_index())
 
 combined = pd.concat(dfs)
-combined.to_csv('stock_data.csv')
+combined.to_csv('data/stock_data.csv')
