@@ -18,4 +18,6 @@ inline double euclidean_distance(const vector<double>& a, const vector<double>& 
     return sqrt(sum);
 }
 
+//test
+
 #endif
