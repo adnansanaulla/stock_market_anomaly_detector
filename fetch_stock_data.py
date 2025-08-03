@@ -11,11 +11,15 @@ tickers = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'TSLA', 'NVDA', 'META', 'NFLX', 'JPM'
 dfs = []
 # loading all the data
 for ticker in tickers:
-    df = yf.download(ticker, start='2010-01-01', end='2025-01-01')
+    df = yf.download(ticker, start='2010-01-01', end='2025-01-01', progress=False, auto_adjust=True)
+    df = df.reset_index()
     df['Ticker'] = ticker
-    dfs.append(df.reset_index())
+    df.columns = [col[0] if isinstance(col, tuple) else col for col in df.columns]
+    dfs.append(df)
 
-combined = pd.concat(dfs)
-combined.to_csv('data/stock_data.csv')
+combined = pd.concat(dfs, ignore_index=True)
+combined = combined.sort_values(['Date', 'Ticker']).reset_index(drop=True)
+combined.to_csv('data/stock_data.csv', index=False)
 
 # data format is Index,Date,Open,High,Low,Close,Adj Close,Volume,Ticker
+# valid dates until 184154
