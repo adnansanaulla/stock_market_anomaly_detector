@@ -17,3 +17,5 @@ for ticker in tickers:
 
 combined = pd.concat(dfs)
 combined.to_csv('data/stock_data.csv')
+
+# data format is Date,Open,High,Low,Close,Adj Close,Volume,Ticker
