@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Project3.dir\\Debug\\main.obj",
+            "outputs": [
+                "C:\\dev\\uf\\dsa\\Project3\\build\\Project3.dir\\Debug\\vc143.pdb",
+                "Project3.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

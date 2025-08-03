@@ -1,0 +1,10 @@
+^C:\DEV\UF\DSA\PROJECT3\BUILD\CMAKEFILES\4D07CDFDC8F42DB5B9BD40E0D327FC53\GENERATE.STAMP.RULE
+setlocal
+C:\Tools\cmake-4.1.0-rc1-windows-x86_64\bin\cmake.exe -SC:/dev/uf/dsa/Project3 -BC:/dev/uf/dsa/Project3/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/dev/uf/dsa/Project3/build/Project3.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

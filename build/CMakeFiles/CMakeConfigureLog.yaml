@@ -1,0 +1,1011 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/"
+    found: "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.14+a129329f1 for .NET Framework
+      Build started 8/1/2025 7:04:41 PM.
+      
+      Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.79
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/dev/uf/dsa/Project3/build/CMakeFiles/4.1.0-rc1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/lld-link.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/lld-link.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/lld-link"
+      - "C:/Tools/opencv/build/x64/vc16/bin/lld-link.com"
+      - "C:/Tools/opencv/build/x64/vc16/bin/lld-link.exe"
+      - "C:/Tools/opencv/build/x64/vc16/bin/lld-link"
+      - "C:/Tools/SFML-3.0.0/bin/lld-link.com"
+      - "C:/Tools/SFML-3.0.0/bin/lld-link.exe"
+      - "C:/Tools/SFML-3.0.0/bin/lld-link"
+      - "C:/Tools/mingw/mingw64/bin/lld-link.com"
+      - "C:/Tools/mingw/mingw64/bin/lld-link.exe"
+      - "C:/Tools/mingw/mingw64/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Tools/lld-link.com"
+      - "C:/Tools/lld-link.exe"
+      - "C:/Tools/lld-link"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Tools/Git/cmd/lld-link.com"
+      - "C:/Tools/Git/cmd/lld-link.exe"
+      - "C:/Tools/Git/cmd/lld-link"
+      - "C:/Tools/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Tools/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Tools/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/mt.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/mt.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/mt"
+      - "C:/Tools/opencv/build/x64/vc16/bin/mt.com"
+      - "C:/Tools/opencv/build/x64/vc16/bin/mt.exe"
+      - "C:/Tools/opencv/build/x64/vc16/bin/mt"
+      - "C:/Tools/SFML-3.0.0/bin/mt.com"
+      - "C:/Tools/SFML-3.0.0/bin/mt.exe"
+      - "C:/Tools/SFML-3.0.0/bin/mt"
+      - "C:/Tools/mingw/mingw64/bin/mt.com"
+      - "C:/Tools/mingw/mingw64/bin/mt.exe"
+      - "C:/Tools/mingw/mingw64/bin/mt"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/mt"
+      - "C:/Tools/mt.com"
+      - "C:/Tools/mt.exe"
+      - "C:/Tools/mt"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Tools/Git/cmd/mt.com"
+      - "C:/Tools/Git/cmd/mt.exe"
+      - "C:/Tools/Git/cmd/mt"
+      - "C:/Tools/Microsoft VS Code/bin/mt.com"
+      - "C:/Tools/Microsoft VS Code/bin/mt.exe"
+      - "C:/Tools/Microsoft VS Code/bin/mt"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/mt.com"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/"
+    found: "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.14.14+a129329f1 for .NET Framework
+      Build started 8/1/2025 7:04:42 PM.
+      
+      Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\4.1.0-rc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.49
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/dev/uf/dsa/Project3/build/CMakeFiles/4.1.0-rc1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/lld-link.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/lld-link.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/lld-link"
+      - "C:/Tools/opencv/build/x64/vc16/bin/lld-link.com"
+      - "C:/Tools/opencv/build/x64/vc16/bin/lld-link.exe"
+      - "C:/Tools/opencv/build/x64/vc16/bin/lld-link"
+      - "C:/Tools/SFML-3.0.0/bin/lld-link.com"
+      - "C:/Tools/SFML-3.0.0/bin/lld-link.exe"
+      - "C:/Tools/SFML-3.0.0/bin/lld-link"
+      - "C:/Tools/mingw/mingw64/bin/lld-link.com"
+      - "C:/Tools/mingw/mingw64/bin/lld-link.exe"
+      - "C:/Tools/mingw/mingw64/bin/lld-link"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lld-link"
+      - "C:/Tools/lld-link.com"
+      - "C:/Tools/lld-link.exe"
+      - "C:/Tools/lld-link"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Tools/Git/cmd/lld-link.com"
+      - "C:/Tools/Git/cmd/lld-link.exe"
+      - "C:/Tools/Git/cmd/lld-link"
+      - "C:/Tools/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Tools/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Tools/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:573 (enable_language)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:546 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/opencv/build/x64/vc16/bin/"
+      - "C:/Tools/SFML-3.0.0/bin/"
+      - "C:/Tools/mingw/mingw64/bin/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Tools/"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Tools/Git/cmd/"
+      - "C:/Tools/Microsoft VS Code/bin/"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/sbin/"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/"
+      - "C:/Program Files (x86)/Project3/bin/"
+      - "C:/Program Files (x86)/Project3/sbin/"
+      - "C:/Program Files (x86)/Project3/"
+    searched_directories:
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/rc.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/rc.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/rc"
+      - "C:/Tools/opencv/build/x64/vc16/bin/rc.com"
+      - "C:/Tools/opencv/build/x64/vc16/bin/rc.exe"
+      - "C:/Tools/opencv/build/x64/vc16/bin/rc"
+      - "C:/Tools/SFML-3.0.0/bin/rc.com"
+      - "C:/Tools/SFML-3.0.0/bin/rc.exe"
+      - "C:/Tools/SFML-3.0.0/bin/rc"
+      - "C:/Tools/mingw/mingw64/bin/rc.com"
+      - "C:/Tools/mingw/mingw64/bin/rc.exe"
+      - "C:/Tools/mingw/mingw64/bin/rc"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/rc"
+      - "C:/Tools/rc.com"
+      - "C:/Tools/rc.exe"
+      - "C:/Tools/rc"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Ranjiv Local/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Tools/Git/cmd/rc.com"
+      - "C:/Tools/Git/cmd/rc.exe"
+      - "C:/Tools/Git/cmd/rc"
+      - "C:/Tools/Microsoft VS Code/bin/rc.com"
+      - "C:/Tools/Microsoft VS Code/bin/rc.exe"
+      - "C:/Tools/Microsoft VS Code/bin/rc"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/rc.com"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/Ranjiv Local/AppData/Roaming/npm/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/rc.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/rc.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/bin/rc"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/sbin/rc.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/sbin/rc.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/sbin/rc"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/rc.com"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/rc.exe"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/rc"
+      - "C:/Program Files (x86)/Project3/bin/rc.com"
+      - "C:/Program Files (x86)/Project3/bin/rc.exe"
+      - "C:/Program Files (x86)/Project3/bin/rc"
+      - "C:/Program Files (x86)/Project3/sbin/rc.com"
+      - "C:/Program Files (x86)/Project3/sbin/rc.exe"
+      - "C:/Program Files (x86)/Project3/sbin/rc"
+      - "C:/Program Files (x86)/Project3/rc.com"
+      - "C:/Program Files (x86)/Project3/rc.exe"
+      - "C:/Program Files (x86)/Project3/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\bin"
+        - "C:\\Tools\\opencv\\build\\x64\\vc16\\bin"
+        - "C:\\Tools\\SFML-3.0.0\\bin"
+        - "C:\\Tools\\mingw\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Tools\\"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Tools\\Git\\cmd"
+        - "C:\\Tools\\Microsoft VS Code\\bin"
+        - "C:\\Users\\Ranjiv Local\\AppData\\Roaming\\npm"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/Project3"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64"
+        - "C:/Program Files (x86)/Project3"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-22aevn"
+      binary: "C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-22aevn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-22aevn'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5f28c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.14+a129329f1 for .NET Framework
+        Build started 8/1/2025 7:04:43 PM.
+        
+        Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22aevn\\cmTC_5f28c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_5f28c.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22aevn\\Debug\\".
+          Creating directory "cmTC_5f28c.dir\\Debug\\cmTC_5f28c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_5f28c.dir\\Debug\\cmTC_5f28c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_5f28c.dir\\Debug\\cmTC_5f28c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_5f28c.dir\\Debug\\\\" /Fd"cmTC_5f28c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35211 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_5f28c.dir\\Debug\\\\" /Fd"cmTC_5f28c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22aevn\\Debug\\cmTC_5f28c.exe" /INCREMENTAL /ILK:"cmTC_5f28c.dir\\Debug\\cmTC_5f28c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-22aevn/Debug/cmTC_5f28c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-22aevn/Debug/cmTC_5f28c.lib" /MACHINE:X64  /machine:x64 cmTC_5f28c.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_5f28c.vcxproj -> C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22aevn\\Debug\\cmTC_5f28c.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_5f28c.dir\\Debug\\cmTC_5f28c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_5f28c.dir\\Debug\\cmTC_5f28c.tlog\\cmTC_5f28c.lastbuildstate".
+        Done Building Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-22aevn\\cmTC_5f28c.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.41
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35211.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-bubza2"
+      binary: "C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-bubza2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-bubza2'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e9581.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.14.14+a129329f1 for .NET Framework
+        Build started 8/1/2025 7:04:44 PM.
+        
+        Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bubza2\\cmTC_e9581.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e9581.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bubza2\\Debug\\".
+          Creating directory "cmTC_e9581.dir\\Debug\\cmTC_e9581.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e9581.dir\\Debug\\cmTC_e9581.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e9581.dir\\Debug\\cmTC_e9581.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_e9581.dir\\Debug\\\\" /Fd"cmTC_e9581.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35211 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_e9581.dir\\Debug\\\\" /Fd"cmTC_e9581.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Tools\\cmake-4.1.0-rc1-windows-x86_64\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bubza2\\Debug\\cmTC_e9581.exe" /INCREMENTAL /ILK:"cmTC_e9581.dir\\Debug\\cmTC_e9581.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-bubza2/Debug/cmTC_e9581.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/dev/uf/dsa/Project3/build/CMakeFiles/CMakeScratch/TryCompile-bubza2/Debug/cmTC_e9581.lib" /MACHINE:X64  /machine:x64 cmTC_e9581.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_e9581.vcxproj -> C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bubza2\\Debug\\cmTC_e9581.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e9581.dir\\Debug\\cmTC_e9581.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e9581.dir\\Debug\\cmTC_e9581.tlog\\cmTC_e9581.lastbuildstate".
+        Done Building Project "C:\\dev\\uf\\dsa\\Project3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bubza2\\cmTC_e9581.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.41
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Tools/cmake-4.1.0-rc1-windows-x86_64/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.44.35211.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

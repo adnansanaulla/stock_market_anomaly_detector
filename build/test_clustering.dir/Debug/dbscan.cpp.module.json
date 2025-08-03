@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "test_clustering.dir\\Debug\\dbscan.obj",
+            "outputs": [
+                "C:\\dev\\uf\\dsa\\Project3\\build\\test_clustering.dir\\Debug\\vc143.pdb",
+                "test_clustering.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}
