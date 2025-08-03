@@ -21,3 +21,5 @@ def compute_volume_zscore(df, window=20):
 
 def save_features(df):
     df.dropna().to_csv('data/features.csv')
+
+# data format is Date,Open,High,Low,Close,Adj Close,Volume,Ticker,Daily Return,Volatility,Volume Z-Score
