@@ -6,12 +6,13 @@
 #include <cmath>
 #include <iomanip>
 #include <set>
+#include <numeric>
 
 #include "utils/csv_utils.h"
 #include "utils/rolling_stats.h"
 #include "algs/anomaly_sliding_window.h"
 #include "algs/anomaly_heap.h"
-#include <numeric>
+
 
 void printDataAnalysis(const std::vector<double>& data) {
     if (data.empty()) return;

@@ -111,8 +111,8 @@ std::vector<int> detectAnomaliesHeap(const std::vector<double>& data, double thr
 }
 
 // Alternative function with granular threshold search that's more conservative
-std::vector<int> detectAnomaliesHeapGranular(const std::vector<double>& data, 
-                                           double target_percentage = 0.03) {
+std::vector<int> detectAnomaliesHeapGranular(const std::vector<double>& data,
+                                            double target_percentage) {
     if (data.empty()) {
         return {};
     }

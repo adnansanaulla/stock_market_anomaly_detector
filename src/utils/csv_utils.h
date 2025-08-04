@@ -25,4 +25,7 @@ std::vector<StockRow> read_features_csv(const std::string& filename);
 // writes a new CSV that includes an anomaly flag column
 void write_anomaly_output(const std::string& filename, const std::vector<StockRow>& data, const std::vector<int>& flags);
 
+// ADD THIS LINE - loads CSV data into a simple vector of doubles for anomaly detection
+bool loadCSV(const std::string& filename, std::vector<double>& data);
+
 #endif // CSV_UTILS_H

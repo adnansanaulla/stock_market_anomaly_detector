@@ -58,3 +58,23 @@ void write_anomaly_output(const std::string& filename, const std::vector<StockRo
 
     file.close();
 }
+
+// ADD THIS FUNCTION AT THE END - Implementation of loadCSV
+bool loadCSV(const std::string& filename, std::vector<double>& data) {
+    // Use your existing read_features_csv function
+    auto stock_data = read_features_csv(filename);
+    
+    if (stock_data.empty()) {
+        std::cerr << "Error: No data loaded from " << filename << std::endl;
+        return false;
+    }
+    
+    // Extract daily_return values as the feature to analyze for anomalies
+    data.reserve(stock_data.size());
+    for (const auto& row : stock_data) {
+        data.push_back(row.daily_return);
+    }
+    
+    std::cout << "Successfully loaded " << data.size() << " data points from " << filename << std::endl;
+    return true;
+}
