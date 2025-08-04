@@ -1,0 +1,38 @@
+
+IMPROVED STOCK MARKET ANOMALY DETECTION REPORT
+============================================
+
+DATA OVERVIEW:
+- Total data points: 186,053
+- Date range: 2010-02-01 00:00:00 to 2024-12-31 00:00:00
+- Unique tickers: 50
+
+DETECTION RESULTS:
+- Sliding Window anomalies: 5,830 (3.13%)
+- Heap-Based anomalies: 5,384 (2.89%)
+- Overlapping anomalies: 2,552 (1.37%)
+
+DETECTION QUALITY ASSESSMENT:
+✅ Sliding Window: Excellent detection rate (3.1%)
+✅ Heap-Based: Good detection rate (2.9%)
+
+TOP AFFECTED TICKERS (Sliding Window):
+ticker
+TSLA    791
+NFLX    512
+NVDA    387
+AAPL    293
+ADBE    257
+
+TOP AFFECTED TICKERS (Heap-Based):
+ticker
+TSLA    556
+NVDA    372
+NFLX    355
+F       183
+CRM     183
+
+RECOMMENDATIONS:
+- Heap algorithm tuning successful
+- Monitor tickers with high anomaly counts for potential issues
+- Consider investigating method differences
