@@ -1,0 +1,10 @@
+^C:\USERS\EDIBM\STOCKDSA\STOCK_MARKET_ANOMALY_DETECTOR\BUILD\CMAKEFILES\4E5EA4573D5193FB42D3C19550AEF0D2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/edibm/stockDSA/stock_market_anomaly_detector -BC:/Users/edibm/stockDSA/stock_market_anomaly_detector/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/edibm/stockDSA/stock_market_anomaly_detector/build/Project3.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

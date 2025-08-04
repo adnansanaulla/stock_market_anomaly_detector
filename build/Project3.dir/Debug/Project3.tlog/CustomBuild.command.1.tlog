@@ -1,0 +1,10 @@
+^C:\USERS\EDIBM\STOCKDSA\STOCK_MARKET_ANOMALY_DETECTOR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/edibm/stockDSA/stock_market_anomaly_detector -BC:/Users/edibm/stockDSA/stock_market_anomaly_detector/build --check-stamp-file C:/Users/edibm/stockDSA/stock_market_anomaly_detector/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

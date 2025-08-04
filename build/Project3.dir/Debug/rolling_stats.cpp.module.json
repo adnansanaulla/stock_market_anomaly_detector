@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Project3.dir\\Debug\\rolling_stats.obj",
+            "outputs": [
+                "C:\\Users\\edibm\\stockDSA\\stock_market_anomaly_detector\\build\\Project3.dir\\Debug\\vc143.pdb",
+                "Project3.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}
