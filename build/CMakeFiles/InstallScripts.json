@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/dev/uf/dsa/Project3/build/cmake_install.cmake"
+		"C:/Users/edibm/stockDSA/stock_market_anomaly_detector/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
