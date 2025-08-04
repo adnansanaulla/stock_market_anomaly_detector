@@ -19,7 +19,7 @@ for ticker in tickers:
 
 combined = pd.concat(dfs, ignore_index=True)
 combined = combined.sort_values(['Date', 'Ticker']).reset_index(drop=True)
-combined.to_csv('data/stock_data.csv', index=False)
+combined.to_csv('../data/stock_data.csv', index=False)
 
 # data format is Index,Date,Open,High,Low,Close,Adj Close,Volume,Ticker
 # valid dates until 184154
