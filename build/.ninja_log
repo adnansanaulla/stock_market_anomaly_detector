@@ -1,7 +1,0 @@
-# ninja log v5
-16	1469	7760157002734563	CMakeFiles/Project3.dir/src/utils/rolling_stats.cpp.obj	6824f0f7f1bebdad
-4	1519	7760157003110749	CMakeFiles/Project3.dir/src/algs/anomoly_sliding_window.cpp.obj	1a4524190defbede
-10	1560	7760157003644902	CMakeFiles/Project3.dir/src/algs/anomoly_heap.cpp.obj	86cb87fb418dc5a7
-31	1748	7760157005565681	CMakeFiles/Project3.dir/src/main.cpp.obj	18ad75fcaa02c719
-22	1910	7760157007165207	CMakeFiles/Project3.dir/src/utils/csv_utils.cpp.obj	e352ac153bed52ba
-1911	2161	7760157009599852	Project3.exe	5902d8b8d2d46d59
