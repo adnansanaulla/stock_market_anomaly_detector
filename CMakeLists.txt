@@ -8,4 +8,6 @@ add_executable(Project3
         src/algs/anomoly_heap.cpp
         src/utils/rolling_stats.cpp
         src/utils/csv_utils.cpp
-        src/main.cpp)
+        src/main.cpp
+        src/algs/anomaly_heap.h
+        src/algs/anomaly_sliding_window.h)

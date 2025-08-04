@@ -353,6 +353,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\dev\uf\dsa\Project3\src\utils\rolling_stats.cpp" />
     <ClCompile Include="C:\dev\uf\dsa\Project3\src\utils\csv_utils.cpp" />
     <ClCompile Include="C:\dev\uf\dsa\Project3\src\main.cpp" />
+    <ClInclude Include="C:\dev\uf\dsa\Project3\src\algs\anomaly_heap.h" />
+    <ClInclude Include="C:\dev\uf\dsa\Project3\src\algs\anomaly_sliding_window.h" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -18,9 +18,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C:\dev\uf\dsa\Project3\src\algs\anomaly_heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\dev\uf\dsa\Project3\src\algs\anomaly_sliding_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="C:\dev\uf\dsa\Project3\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C19B01AF-4689-36DB-A077-983D64FCF35F}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{F0F92B49-086D-3329-9F98-1BD081980D71}</UniqueIdentifier>
     </Filter>

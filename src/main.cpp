@@ -1,22 +1,42 @@
-#include "utils/csv_utils.h"
 #include <iostream>
+#include <vector>
+#include <string>
+
+#include "utils/csv_utils.h"
+#include "algs/anomaly_sliding_window.h"
+#include "algs/anomaly_heap.h"
 
 int main() {
-    std::string filename = "../../data/features.csv";
+    std::string input_file = "../../data/features.csv";
+    std::string output_slide = "../../output/sliding_anomalies.csv";
+    std::string output_heap  = "../../output/heap_anomalies.csv";
 
-    std::vector<StockRow> rows = read_features_csv(filename);
+    // read data
+    std::vector<StockRow> data = read_features_csv(input_file);
+    std::cout << "Loaded " << data.size() << " rows from " << input_file << "\n";
 
-    std::cout << "Loaded " << rows.size() << " rows from " << filename << "\n";
-
-    // Print the first 3 rows
-    for (int i = 0; i < std::min(3, (int)rows.size()); ++i) {
-        const auto& row = rows[i];
-        std::cout << row.date << " | "
-                  << row.ticker << " | "
-                  << row.close << " | "
-                  << row.daily_return << " | "
-                  << row.volume_zscore << "\n";
+    // Extract the daily return column
+    std::vector<double> series;
+    for (const auto& row : data) {
+        series.push_back(row.daily_return);
     }
+
+    // Apply Sliding Window Detection
+    int window_size = 30;
+    double sliding_threshold = 2.0;
+    std::vector<int> sliding_flags = detectSlidingAnomalies(series, window_size, sliding_threshold);
+
+    // Apply Heap-Based Detection
+    double heap_threshold = 5.0;
+    std::vector<int> heap_flags = detectHeapAnomalies(series, window_size, heap_threshold);
+
+    // Output results
+    write_anomaly_output(output_slide, data, sliding_flags);
+    write_anomaly_output(output_heap, data, heap_flags);
+
+    std::cout << "Anomaly results written to:\n";
+    std::cout << "  -> " << output_slide << "\n";
+    std::cout << "  -> " << output_heap << "\n";
 
     return 0;
 }
