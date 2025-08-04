@@ -19,7 +19,7 @@ def safe_read_csv(filepath, parse_dates=False):
         print(f"⚠️ Failed to read {filepath}: {e}")
         return pd.DataFrame()
 
-# --- Load raw anomaly data (no date parsing) ---
+# --- Load raw anomaly data ---
 sliding_raw = safe_read_csv("../output/sliding_anomalies.csv")
 heap_raw = safe_read_csv("../output/heap_anomalies.csv")
 
@@ -35,15 +35,27 @@ features = safe_read_csv("../data/features.csv", parse_dates=True)
 
 # --- Replace fake Date index with actual Date from features.csv ---
 def inject_real_dates(anomalies, features):
+    if anomalies.empty:
+        print("⚠️ No anomalies to process.")
+        return pd.DataFrame()
+
     fixed = []
     for ticker in anomalies["Ticker"].unique():
         df_anom = anomalies[anomalies["Ticker"] == ticker].copy()
         df_feat = features[features["Ticker"] == ticker].sort_values("Date").reset_index(drop=True)
 
+        if df_feat.empty:
+            print(f"⚠️ No feature data for ticker: {ticker}")
+            continue
+
         df_anom["RealDate"] = df_anom["Date"].astype(int).apply(
             lambda idx: df_feat.iloc[idx]["Date"] if idx < len(df_feat) else pd.NaT
         )
         fixed.append(df_anom)
+
+    if not fixed:
+        print("⚠️ No valid ticker matches found. Skipping date injection.")
+        return pd.DataFrame()
 
     return pd.concat(fixed).dropna(subset=["RealDate"]).rename(columns={"RealDate": "Date"})
 
@@ -52,8 +64,12 @@ sliding = inject_real_dates(sliding, features)
 heap = inject_real_dates(heap, features)
 
 # --- Compare overlap ---
-overlap = pd.merge(sliding, heap, on=["Date", "Ticker"])
-print(f"🔍 Overlap anomalies: {len(overlap)}")
+if not sliding.empty and not heap.empty:
+    overlap = pd.merge(sliding, heap, on=["Date", "Ticker"])
+    print(f"🔍 Overlap anomalies: {len(overlap)}")
+else:
+    overlap = pd.DataFrame()
+    print("⚠️ Skipping overlap comparison due to missing data.")
 
 # --- Write summary file ---
 with open("anomaly_summary.txt", "w") as f:
@@ -62,12 +78,18 @@ with open("anomaly_summary.txt", "w") as f:
     f.write(f"Overlap: {len(overlap)}\n\n")
 
     f.write("Sliding anomalies per ticker:\n")
-    for ticker, count in sliding["Ticker"].value_counts().items():
-        f.write(f"{ticker}: {count}\n")
+    if not sliding.empty and "Ticker" in sliding.columns:
+        for ticker, count in sliding["Ticker"].value_counts().items():
+            f.write(f"{ticker}: {count}\n")
+    else:
+        f.write("No sliding anomalies found.\n")
 
     f.write("\nHeap anomalies per ticker:\n")
-    for ticker, count in heap["Ticker"].value_counts().items():
-        f.write(f"{ticker}: {count}\n")
+    if not heap.empty and "Ticker" in heap.columns:
+        for ticker, count in heap["Ticker"].value_counts().items():
+            f.write(f"{ticker}: {count}\n")
+    else:
+        f.write("No heap anomalies found.\n")
 
 # --- Plot function ---
 def plot_time_series_with_anomalies(anomalies, ticker, method):
@@ -81,9 +103,19 @@ def plot_time_series_with_anomalies(anomalies, ticker, method):
         print(f"⚠️ No anomalies for ticker: {ticker} using {method}")
         return
 
+    anomalies = anomalies.dropna(subset=["Date", "Close"])
+    anomalies = anomalies[anomalies["Close"].apply(lambda x: isinstance(x, (int, float, np.number)))]
+
+    x = anomalies["Date"]
+    y = anomalies["Close"]
+
+    if len(x) != len(y):
+        print(f"❌ Skipping plot for {ticker}: Date and Close mismatch ({len(x)} vs {len(y)})")
+        return
+
     plt.figure(figsize=(12, 5))
     plt.plot(df["Date"], df["Close"], label="Close Price", alpha=0.6)
-    plt.scatter(anomalies["Date"], anomalies["Close"], color="red", label="Anomalies", s=20)
+    plt.scatter(x, y, color="red", label="Anomalies", s=20)
     plt.title(f"{ticker} - {method} Anomalies")
     plt.xlabel("Date")
     plt.ylabel("Close Price")

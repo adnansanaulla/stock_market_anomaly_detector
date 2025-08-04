@@ -1,3 +1,49 @@
-Sliding total: 16985
-Heap total: 16985
-Overlap: 16985
+Sliding total: 193
+Heap total: 0
+Overlap: 0
+
+Sliding anomalies per ticker:
+F: 14
+AMZN: 12
+NFLX: 12
+NVDA: 12
+ADBE: 11
+BAC: 11
+QCOM: 10
+BA: 9
+AAPL: 9
+UNH: 9
+BLK: 8
+GS: 7
+BKNG: 7
+CAT: 6
+CRM: 5
+GOOG: 4
+SBUX: 4
+DE: 4
+GE: 4
+MA: 3
+CSCO: 3
+MRK: 3
+UPS: 3
+NKE: 2
+HD: 2
+PFE: 2
+JPM: 2
+INTC: 2
+CVX: 1
+DIS: 1
+MSFT: 1
+KO: 1
+ORCL: 1
+WMT: 1
+V: 1
+T: 1
+MMM: 1
+COST: 1
+IBM: 1
+RTX: 1
+PG: 1
+
+Heap anomalies per ticker:
+No heap anomalies found.
