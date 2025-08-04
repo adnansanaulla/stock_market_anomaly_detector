@@ -1,8 +1,16 @@
-//
-// Created by Ranjiv Local on 8/3/2025.
-//
+#pragma once
+#include <deque>
 
-#ifndef ROLLING_STATS_H
-#define ROLLING_STATS_H
+class RollingStats {
+public:
+    RollingStats(int window_size);
 
-#endif //ROLLING_STATS_H
+    void add(double value);
+    double mean() const;
+    double stddev() const;
+    bool ready() const;
+
+private:
+    int window_size;
+    std::deque<double> window;
+};
