@@ -1,0 +1,3 @@
+Sliding total: 16985
+Heap total: 16985
+Overlap: 16985
