@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load both result CSVs
-sliding = pd.read_csv("output/sliding_anomalies.csv", parse_dates=["Date"])
-heap = pd.read_csv("output/heap_anomalies.csv", parse_dates=["Date"])
+sliding = pd.read_csv("../output/sliding_anomalies.csv", parse_dates=["Date"])
+heap = pd.read_csv("../output/heap_anomalies.csv", parse_dates=["Date"])
 
 def plot_anomalies(df, ticker, method):
     df = df[df["Ticker"] == ticker].sort_values("Date")

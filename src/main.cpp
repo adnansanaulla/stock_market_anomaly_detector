@@ -7,9 +7,9 @@
 #include "algs/anomaly_heap.h"
 
 int main() {
-    std::string input_file = "../../data/features.csv";
-    std::string output_slide = "../../output/sliding_anomalies.csv";
-    std::string output_heap  = "../../output/heap_anomalies.csv";
+    std::string input_file = "../data/features.csv";
+    std::string output_slide = "../output/sliding_anomalies.csv";
+    std::string output_heap  = "../output/heap_anomalies.csv";
 
     // read data
     std::vector<StockRow> data = read_features_csv(input_file);
