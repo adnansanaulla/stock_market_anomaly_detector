@@ -177,8 +177,6 @@ int main() {
     
     std::cout << "===================================================" << std::endl;
     
-    std::cout << std::endl << "🚀 Run 'python improved_anomaly_visualization.py' for enhanced visualizations!" << std::endl;
-    
     return 0;
 }
 

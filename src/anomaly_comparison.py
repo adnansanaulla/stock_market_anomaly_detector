@@ -265,22 +265,30 @@ class ImprovedAnomalyVisualizer:
     def create_ticker_specific_plots(self, top_n=5):
         """Create detailed plots for specific tickers"""
         print(f"Creating plots for top {top_n} tickers...")
-        
+
         try:
-            if hasattr(self, 'sliding_merged') and len(self.sliding_merged) > 0:
-                # Get top tickers from sliding window (more conservative method)
-                top_tickers = self.sliding_merged['ticker'].value_counts().head(top_n).index
-                
+            if hasattr(self, 'sliding_merged') and hasattr(self, 'heap_merged'):
+                sliding_tickers = self.sliding_merged['ticker'].value_counts()
+                heap_tickers = self.heap_merged['ticker'].value_counts()
+
+                # Combine both ticker counts and keep top N unique tickers
+                combined_tickers = pd.concat([sliding_tickers, heap_tickers]) \
+                                      .groupby(level=0).sum() \
+                                      .sort_values(ascending=False)
+
+                top_tickers = combined_tickers.head(top_n).index
+                print(f"✅ Selected top tickers from both methods: {list(top_tickers)}")
+
                 for ticker in top_tickers:
                     self.create_single_ticker_plot(ticker)
-                
+
                 print(f"✅ Created plots for {len(top_tickers)} tickers")
             else:
-                print("⚠️ No sliding window data available for ticker-specific plots")
-                
+                print("⚠️ Not enough anomaly data to create ticker-specific plots")
+
         except Exception as e:
             print(f"Error creating ticker-specific plots: {e}")
-    
+
     def create_single_ticker_plot(self, ticker):
         """Create a detailed plot for a single ticker"""
         try:
@@ -311,62 +319,70 @@ class ImprovedAnomalyVisualizer:
                 feature_col = numeric_cols[0] if len(numeric_cols) > 0 else None
             
             if feature_col:
-                # Time series plot
                 x_axis = ticker_data.index if 'date' not in ticker_data.columns else ticker_data['date']
                 
-                # Plot normal points
+                # Masks
                 normal_mask = ~(ticker_data['is_sliding_anomaly'] | ticker_data['is_heap_anomaly'])
-                ax1.scatter(x_axis[normal_mask], ticker_data[normal_mask][feature_col], 
-                           c='gray', alpha=0.6, s=20, label='Normal')
-                
-                # Plot sliding anomalies
                 sliding_mask = ticker_data['is_sliding_anomaly']
+                heap_only_mask = ticker_data['is_heap_anomaly'] & ~ticker_data['is_sliding_anomaly']
+                
+                # Time series scatter plot
+                ax1.scatter(x_axis[normal_mask], ticker_data[normal_mask][feature_col], 
+                            c='gray', alpha=0.6, s=20, label='Normal')
                 if sliding_mask.any():
                     ax1.scatter(x_axis[sliding_mask], ticker_data[sliding_mask][feature_col], 
-                               c='#3498db', s=60, label='Sliding Window', marker='^', edgecolors='darkblue')
-                
-                # Plot heap anomalies (only those not caught by sliding)
-                heap_only_mask = ticker_data['is_heap_anomaly'] & ~ticker_data['is_sliding_anomaly']
+                                c='#3498db', s=60, label='Sliding Window', marker='^', edgecolors='darkblue')
                 if heap_only_mask.any():
                     ax1.scatter(x_axis[heap_only_mask], ticker_data[heap_only_mask][feature_col], 
-                               c='#e74c3c', s=40, label='Heap Only', marker='o', edgecolors='darkred')
+                                c='#e74c3c', s=40, label='Heap Only', marker='o', edgecolors='darkred')
                 
                 ax1.set_title(f'{ticker} - {feature_col.replace("_", " ").title()} Over Time')
                 ax1.set_ylabel(feature_col.replace('_', ' ').title())
                 ax1.legend()
                 ax1.grid(True, alpha=0.3)
+
                 
-                # Statistics comparison
-                if sliding_mask.any():
+                if sliding_mask.any() or heap_only_mask.any():
                     categories = ['Mean', 'Std', 'Min', 'Max']
-                    all_data_stats = [ticker_data[feature_col].mean(), ticker_data[feature_col].std(), 
-                                     ticker_data[feature_col].min(), ticker_data[feature_col].max()]
-                    sliding_stats = [ticker_data[sliding_mask][feature_col].mean(), 
-                                   ticker_data[sliding_mask][feature_col].std(),
-                                   ticker_data[sliding_mask][feature_col].min(), 
-                                   ticker_data[sliding_mask][feature_col].max()]
-                    
                     x = np.arange(len(categories))
-                    width = 0.35
-                    
-                    ax2.bar(x - width/2, all_data_stats, width, label='All Data', alpha=0.8, color='gray')
-                    ax2.bar(x + width/2, sliding_stats, width, label='Sliding Anomalies', alpha=0.8, color='#3498db')
-                    
+                    width = 0.25
+                    offset = 0
+
+                    all_data_stats = [ticker_data[feature_col].mean(), ticker_data[feature_col].std(),
+                                      ticker_data[feature_col].min(), ticker_data[feature_col].max()]
+                    ax2.bar(x + offset, all_data_stats, width, label='All Data', alpha=0.8, color='gray')
+                    offset += width
+
+                    if sliding_mask.any():
+                        sliding_stats = [ticker_data[sliding_mask][feature_col].mean(), 
+                                         ticker_data[sliding_mask][feature_col].std(),
+                                         ticker_data[sliding_mask][feature_col].min(), 
+                                         ticker_data[sliding_mask][feature_col].max()]
+                        ax2.bar(x + offset, sliding_stats, width, label='Sliding Anomalies', alpha=0.8, color='#3498db')
+                        offset += width
+
+                    if heap_only_mask.any():
+                        heap_stats = [ticker_data[heap_only_mask][feature_col].mean(), 
+                                      ticker_data[heap_only_mask][feature_col].std(),
+                                      ticker_data[heap_only_mask][feature_col].min(), 
+                                      ticker_data[heap_only_mask][feature_col].max()]
+                        ax2.bar(x + offset, heap_stats, width, label='Heap Anomalies', alpha=0.8, color='#e74c3c')
+
                     ax2.set_xlabel('Statistics')
                     ax2.set_ylabel('Value')
                     ax2.set_title(f'{ticker} - Statistical Comparison')
-                    ax2.set_xticks(x)
+                    ax2.set_xticks(x + width)
                     ax2.set_xticklabels(categories)
                     ax2.legend()
                     ax2.grid(True, alpha=0.3)
                 else:
-                    ax2.text(0.5, 0.5, 'No anomalies found for this ticker', 
-                            ha='center', va='center', transform=ax2.transAxes)
-            
+                    ax2.text(0.5, 0.5, 'No anomalies found for this ticker',
+                             ha='center', va='center', transform=ax2.transAxes)
+
             plt.tight_layout()
             plt.savefig(self.plots_dir / f'{ticker}_detailed_analysis.png', dpi=300, bbox_inches='tight')
             plt.close()
-            
+
         except Exception as e:
             print(f"Error creating plot for ticker {ticker}: {e}")
     
@@ -424,7 +440,6 @@ RECOMMENDATIONS:
 - {'Both methods show good agreement' if overlap_rate > 2 else 'Consider investigating method differences'}
 """
 
-                # ✅ FIXED INDENTATION:
                 with open(self.plots_dir / "improved_anomaly_summary.txt", "w", encoding="utf-8") as f:
                     f.write(report)
 
