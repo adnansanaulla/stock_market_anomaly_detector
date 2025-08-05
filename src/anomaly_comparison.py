@@ -395,8 +395,8 @@ class ImprovedAnomalyVisualizer:
                     date_range = f"{self.features_df['date'].min()} to {self.features_df['date'].max()}"
                 
                 report = f"""
-IMPROVED STOCK MARKET ANOMALY DETECTION REPORT
-============================================
+STOCK MARKET ANOMALY DETECTION REPORT
+=====================================
 
 DATA OVERVIEW:
 - Total data points: {len(self.features_df):,}
@@ -437,14 +437,14 @@ RECOMMENDATIONS:
     
     def run_full_analysis(self):
         """Run the complete analysis and visualization"""
-        print("🚀 Starting improved anomaly analysis...")
+        print("🚀 Starting anomaly analysis...")
         
         self.create_overview_plots()
         self.create_ticker_specific_plots()
         self.create_summary_report()
         
         print("\n" + "="*50)
-        print("📊 IMPROVED ANALYSIS COMPLETE")
+        print("📊 ANALYSIS COMPLETE")
         print("="*50)
         print(f"📈 Total sliding window anomalies: {len(self.sliding_df):,}")
         print(f"📈 Total heap-based anomalies: {len(self.heap_df):,}")
