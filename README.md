@@ -5,6 +5,7 @@
 
 # Step 2: Clone the repository to whatever file you like
 # Example: git clone https://github.com/adnansanaulla/stock_market_anomaly_detector.git
+# Step 2 Part 2: Delete all the files inside plots folder if you want to see the files be generated 
 
 # Step 3 Part 1: change the directory to the src folder
 # Step 3 Part 2: in the terminal call: python fetch_stock_data.py
