@@ -32,15 +32,15 @@ class ImprovedAnomalyVisualizer:
         
         # Load feature data
         self.features_df = pd.read_csv(self.feature_file)
-        print(f"📊 Feature data loaded: {len(self.features_df)} rows")
-        print(f"📊 Columns in features data: {list(self.features_df.columns)}")
+        print(f"Feature data loaded: {len(self.features_df)} rows")
+        print(f"Columns in features data: {list(self.features_df.columns)}")
         
         # Load anomaly data
         try:
             self.sliding_df = pd.read_csv(self.sliding_file)
             self.heap_df = pd.read_csv(self.heap_file)
-            print(f"🔍 Sliding anomalies: {len(self.sliding_df)}")
-            print(f"🔍 Heap anomalies: {len(self.heap_df)}")
+            print(f"Sliding anomalies: {len(self.sliding_df)}")
+            print(f"Heap anomalies: {len(self.heap_df)}")
         except Exception as e:
             print(f"Error loading anomaly files: {e}")
             return
