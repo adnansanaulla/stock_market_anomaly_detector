@@ -27,7 +27,7 @@ class ImprovedAnomalyVisualizer:
         self.load_data()
     
     def load_data(self):
-        """Load all required data files"""
+        """Loads all required data files"""
         print("Loading data files...")
         
         # Load feature data
